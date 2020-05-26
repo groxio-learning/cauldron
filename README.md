@@ -1,6 +1,8 @@
 # Cauldron
 
-**TODO: Add description**
+Demonstrate why we prefer call to cast in OTP. 
+
+See grox.io video to show how message queue length can grow
 
 ## Installation
 

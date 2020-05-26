@@ -22,11 +22,13 @@ defmodule Cauldron do
     {:ok, initial_value}
   end
   
+  # Problem! Potentially growing message queue 
   def handle_cast(:toil, state) do
     long_job()
     {:noreply, state + 1}
   end
 
+  # Handle call builds in backpressure
   def handle_call(:toil, _from, state) do
     long_job()
     {:reply, :ok, state + 1}
